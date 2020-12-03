@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:local="using:nVentive.Umbrella.Samples.Views.Samples.ZoomControl"
+					xmlns:win="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:xamarin="http://nventive.com/xamarin"
+					xmlns:ios="http://nventive.com/ios"
+					xmlns:android="http://nventive.com/android"
+					xmlns:u="using:Chinook.View.Controls"
+					xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+					mc:Ignorable="ios android xamarin">
+
+	<Style TargetType="u:ZoomControl">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="u:ZoomControl">
+					<Grid Background="Black">
+						<!-- Android: #27916 ScrollBarVisibility.Hidden disables scrolling -->
+						<ScrollViewer x:Name="ScrollViewer"
+									  HorizontalScrollMode="Enabled"
+									  VerticalScrollMode="Enabled"
+									  win:HorizontalScrollBarVisibility="Hidden"
+									  win:VerticalScrollBarVisibility="Hidden"									  
+									  ios:HorizontalScrollBarVisibility="Hidden"
+									  ios:VerticalScrollBarVisibility="Hidden"									  
+									  android:HorizontalScrollBarVisibility="Visible"
+									  android:VerticalScrollBarVisibility="Visible"
+									  ZoomMode="Enabled">
+							<ContentPresenter x:Name="ContentPresenter"
+											  VerticalAlignment="Top"
+											  HorizontalAlignment="Left"
+											  Content="{TemplateBinding Content}" />
+						</ScrollViewer>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

@@ -1,0 +1,93 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+  <PropertyGroup>
+		<!-- Change the TargetFrameworks depending on which platform you are building on. This avoids errors as it is impossible to build UAP on OSX (MacOS) -->
+		<TargetFrameworks Condition="'$([MSBuild]::IsOsPlatform(OSX))'">netstandard2.0;xamarinios10;</TargetFrameworks>
+		<TargetFrameworks Condition="'!$([MSBuild]::IsOsPlatform(OSX))'">netstandard2.0;xamarinios10;monoandroid10.0;uap10.0.17763</TargetFrameworks>
+		<!-- Ensures the .xr.xml files are generated in a proper layout folder -->
+		<GenerateLibraryLayout>true</GenerateLibraryLayout>
+		<RootNamespace>Chinook.View</RootNamespace>
+		<Authors>nventive</Authors>
+		<Company>nventive</Company>
+		<AssemblyName>Chinook.View.Uno</AssemblyName>
+		<PackageId>Chinook.View.Uno</PackageId>
+		<Description>Chinook.View.Uno</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+    <DefineConstants>$(DefineConstants);__WASM__</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Uno.UI" Version="3.0.11" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.0" />
+		<PackageReference Include="System.Reactive" Version="4.4.1" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="System.Xml" />
+		<Reference Include="System.Xml.Linq" />
+	</ItemGroup>
+
+	<!-- UWP -->
+	<ItemGroup Condition="'$(TargetFramework)' == 'uap10.0.17763'">
+		<!-- Include all .XAML files. -->
+		<Page Include="Controls\**\*.xaml">
+			<Pack>True</Pack>
+			<PackagePath>lib\$(TargetFramework)\$(AssemblyName)</PackagePath>
+		</Page>
+
+		<!-- Add the Generic index. -->
+		<Page Include="Themes\Generic.xaml" Condition="Exists('Themes\Generic.xaml')">
+			<Link>Themes\Generic.xaml</Link>
+		</Page>
+
+		<!-- Exclude Uno files. -->
+		<Page Remove="**\*.Xamarin.xaml" />
+		<None Include="**\*.Xamarin.xaml" />
+
+		<!-- Remove all .Designer.cs resources on uap10.0.17763 -->
+		<Compile Remove="**\Resources\*.Designer.cs" />
+		<None Include="**\Resources\*.Designer.cs" />
+
+		<PRIResource Include="**\*.resw" />
+
+		<SDKReference Include="WindowsMobile, Version=10.0.17763.0">
+			<Name>Microsoft Mobile Extension SDK for Universal App Platform</Name>
+		</SDKReference>
+	</ItemGroup>
+
+	<!-- Uno -->
+	<ItemGroup Condition="'$(TargetFramework)' == 'xamarinios10' or '$(TargetFramework)' == 'MonoAndroid10.0'">
+		<!-- Include all .XAML files. -->
+		<Page Include="Controls\**\*.xaml" />
+
+		<!-- Exclude UWP files. -->
+		<Page Remove="**\*.UWP.xaml" />
+		<None Include="**\*.UWP.xaml" Exclude="bin\**\*.xaml;obj\**\*.xaml" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Panels\SnapPanel\SnapAnchor.cs">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Compile>
+	  <Compile Update="Panels\SnapPanel\SnapPanel.cs">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Compile>
+	  <Compile Update="Panels\SnapPanel\SnapPoint.cs">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Compile>
+	  <Compile Update="Panels\SnapPanel\SnapPointInfo.cs">
+	    <Generator>MSBuild:Compile</Generator>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Update="Converters\PrettyDateConverter\Resources\PrettyDateFormatterStrings.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+			<LastGenOutput>PrettyDateFormatterStrings.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Converters\PrettyDistanceConverter\Resources\DistanceHelperStrings.resx">
+			<Generator>ResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+	</ItemGroup>
+</Project>

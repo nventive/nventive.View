@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/DelayControl/DelayControl.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/ImagePresenter/ImagePresenter.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/ImageSlideshow/ImageSlideshow.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/LogCounterControl/LogCounterControl.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/MembershipCardControl/MembershipCardControl.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/PathControl/PathControl.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/ParallaxListView/ParallaxListView.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/PeekingFlipView/PeekingFlipView.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/PeekingFlipView/PeekingFlipViewItem.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/SwipeRefresh/SwipeRefresh.xaml" />
+		<ResourceDictionary Source="ms-appx:///Chinook.View.Uno/Controls/ZoomControl/ZoomControl.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
