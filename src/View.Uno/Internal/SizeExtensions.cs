@@ -1,11 +1,16 @@
-﻿#if WINDOWS_UWP
+﻿#if WINDOWS_UWP || HAS_WINUI
 using System;
 using System.Collections.Generic;
 using System.Text;
-using Windows.UI.Xaml;
 using Windows.Foundation;
-using Windows.UI.Xaml.Controls;
 using NativeValue = System.Double;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+#else
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+#endif
 
 namespace Chinook.View
 {

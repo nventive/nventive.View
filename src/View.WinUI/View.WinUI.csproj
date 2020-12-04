@@ -1,0 +1,135 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net5.0-windows10.0.19041.0</TargetFramework>
+		<TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
+		<DefineConstants>HAS_WINUI</DefineConstants>
+		<GenerateLibraryLayout>true</GenerateLibraryLayout>
+		<RootNamespace>Chinook.View</RootNamespace>
+		<Authors>nventive</Authors>
+		<Company>nventive</Company>
+		<AssemblyName>Chinook.View.WinUI</AssemblyName>
+		<PackageId>Chinook.View.WinUI</PackageId>
+		<Description>Chinook.View for WinUI</Description>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<DefineConstants>HAS_WINUI</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.WinUI" Version="3.0.0-preview3.201113.0" />
+		<PackageReference Include="Uno.Core" Version="2.0.0" />
+		<PackageReference Include="System.Reactive" Version="4.4.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Compile Include="..\View.Uno\Controls\AnimatedContentControl\AnimatedContentControl.cs" Link="Controls\AnimatedContentControl\AnimatedContentControl.cs" />
+		<Compile Include="..\View.Uno\Controls\AnimatedControl\AnimatedControl.cs" Link="Controls\AnimatedControl\AnimatedControl.cs" />
+		<Compile Include="..\View.Uno\Controls\AnimatedHeaderControl\AnimatedHeaderControl.cs" Link="Controls\AnimatedHeaderControl\AnimatedHeaderControl.cs" />
+		<Compile Include="..\View.Uno\Controls\DelayControl\DelayControl.cs" Link="Controls\DelayControl\DelayControl.cs" />
+		<Compile Include="..\View.Uno\Controls\ImagePresenter\ImagePresenter.cs" Link="Controls\ImagePresenter\ImagePresenter.cs" />
+		<Compile Include="..\View.Uno\Controls\ImagePresenter\ImagePresenter.Properties.cs" Link="Controls\ImagePresenter\ImagePresenter.Properties.cs" />
+		<Compile Include="..\View.Uno\Controls\ImageSlideshow\ImageSlideshow.cs" Link="Controls\ImageSlideshow\ImageSlideshow.cs" />
+		<Compile Include="..\View.Uno\Controls\ImageSlideshow\ImageSlideshow.Properties.cs" Link="Controls\ImageSlideshow\ImageSlideshow.Properties.cs" />
+		<Compile Include="..\View.Uno\Controls\LogCounterControl\LogCounterControl.UWP.cs" Link="Controls\LogCounterControl\LogCounterControl.cs" />
+		<Compile Include="..\View.Uno\Controls\MembershipCardControl\MembershipCardControl.cs" Link="Controls\MembershipCardControl\MembershipCardControl.cs" />
+		<Compile Include="..\View.Uno\Controls\ParallaxListView\ParallaxListView.cs" Link="Controls\ParallaxListView\ParallaxListView.cs" />
+		<Compile Include="..\View.Uno\Controls\ParallaxListView\ParallaxListView.Properties.cs" Link="Controls\ParallaxListView\ParallaxListView.Properties.cs" />
+		<Compile Include="..\View.Uno\Controls\PathControl\PathControl.cs" Link="Controls\PathControl\PathControl.cs" />
+		<Compile Include="..\View.Uno\Controls\PeekingFlipView\PeekingFlipView.cs" Link="Controls\PeekingFlipView\PeekingFlipView.cs" />
+		<Compile Include="..\View.Uno\Controls\PeekingFlipView\PeekingFlipViewItem.cs" Link="Controls\PeekingFlipView\PeekingFlipViewItem.cs" />
+		<Compile Include="..\View.Uno\Controls\SwipeRefresh\SwipeRefresh.cs" Link="Controls\SwipeRefresh\SwipeRefresh.cs" />
+		<Compile Include="..\View.Uno\Controls\SwipeRefresh\SwipeRefresh.UWP.cs" Link="Controls\SwipeRefresh\SwipeRefresh.WinUI.cs" />
+		<Compile Include="..\View.Uno\Controls\ZoomControl\ZoomControl.cs" Link="Controls\ZoomControl\ZoomControl.cs" />
+		<Compile Include="..\View.Uno\Controls\ZoomControl\ResetViewPortZoomControlBehavior.cs" Link="Controls\ZoomControl\ResetViewPortZoomControlBehavior.cs" />
+
+		<Compile Include="..\View.Uno\Converters\EnumToString\ConversionExtensionConverter.cs" Link="Converters\EnumToString\ConversionExtensionConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\EnumToString\FromEnumToStringConverter.cs" Link="Converters\EnumToString\FromEnumToStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\BoundMode.cs" Link="Converters\PartitionConverter\BoundMode.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\DiscretePartition.cs" Link="Converters\PartitionConverter\DiscretePartition.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\DoubleEqualityAccuracy.cs" Link="Converters\PartitionConverter\DoubleEqualityAccuracy.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\DoubleEqualityAccuracyExtensions.cs" Link="Converters\PartitionConverter\DoubleEqualityAccuracyExtensions.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\IntervalPartition.cs" Link="Converters\PartitionConverter\IntervalPartition.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\ParityPartitionStrategy.cs" Link="Converters\PartitionConverter\ParityPartitionStrategy.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\Partition.cs" Link="Converters\PartitionConverter\Partition.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\PartitionConverter.cs" Link="Converters\PartitionConverter\PartitionConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PartitionConverter\PartitionStrategy.cs" Link="Converters\PartitionConverter\PartitionStrategy.cs" />
+		<!--<Compile Include="..\View.Uno\Converters\PrettyDateConverter\FromDateToPrettyStringConverter.cs" Link="Converters\PrettyDateConverter\FromDateToPrettyStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettyDateConverter\FromDateToPrettyStringConverter.cs" Link="Converters\PrettyDateConverter\FromDateToPrettyStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettyDateConverter\IAutoRefreshConverter.cs" Link="Converters\PrettyDateConverter\IAutoRefreshConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettyDateConverter\PrettyDateFormatter.cs" Link="Converters\PrettyDateConverter\PrettyDateFormatter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettyDistanceConverter\DistanceHelper.cs" Link="Converters\PrettyDistanceConverter\DistanceHelper.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettyDistanceConverter\DistanceUnit.cs" Link="Converters\PrettyDistanceConverter\DistanceUnit.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettyDistanceConverter\DistanceUnitFormat.cs" Link="Converters\PrettyDistanceConverter\DistanceUnitFormat.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettyDistanceConverter\FromDistanceToPrettyStringConverter.cs" Link="Converters\PrettyDistanceConverter\FromDistanceToPrettyStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettyDistanceConverter\PrettyDistanceFormatter.cs" Link="Converters\PrettyDistanceConverter\PrettyDistanceFormatter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\FromNumberToPrettyStringConverter.cs" Link="Converters\PrettySizeConverter\FromNumberToPrettyStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\FromQuantityToPrettyStringConverter.cs" Link="Converters\PrettySizeConverter\FromQuantityToPrettyStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\FromSizeToPrettyStringConverter.cs" Link="Converters\PrettySizeConverter\FromSizeToPrettyStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\IPrettyNumberFormatter.cs" Link="Converters\PrettySizeConverter\IPrettyNumberFormatter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\IPrettyQuantityFormatter.cs" Link="Converters\PrettySizeConverter\IPrettyQuantityFormatter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\IPrettySizeFormatter.cs" Link="Converters\PrettySizeConverter\IPrettySizeFormatter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\PrettyNumberFormatStep.cs" Link="Converters\PrettySizeConverter\PrettyNumberFormatStep.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\PrettyNumberFormatterBase.cs" Link="Converters\PrettySizeConverter\PrettyNumberFormatterBase.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\PrettyQuantityFormatter.cs" Link="Converters\PrettySizeConverter\PrettyQuantityFormatter.cs" />
+		<Compile Include="..\View.Uno\Converters\PrettySizeConverter\PrettySizeFormatter.cs" Link="Converters\PrettySizeConverter\PrettySizeFormatter.cs" />-->
+		<Compile Include="..\View.Uno\Converters\ConverterBase.cs" Link="Converters\ConverterBase.cs" />
+		<Compile Include="..\View.Uno\Converters\FromEmptyStringToCustomValueConverter.cs" Link="Converters\FromEmptyStringToCustomValueConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromEnumerableHasAnyToVisibilityConverter.cs" Link="Converters\FromEnumerableHasAnyToVisibilityConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromInputScopeNameToInputScopeConverter.cs" Link="Converters\FromInputScopeNameToInputScopeConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromNullableBoolToCustomValueConverter.cs" Link="Converters\FromNullableBoolToCustomValueConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromNullableBoolToReverseBoolConverter.cs" Link="Converters\FromNullableBoolToReverseBoolConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromNullableBoolToVisibilityConverter.cs" Link="Converters\FromNullableBoolToVisibilityConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromNullableToCustomValueConverter.cs" Link="Converters\FromNullableToCustomValueConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromNumericArithmeticToStringConverter.cs" Link="Converters\FromNumericArithmeticToStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromObjectToFormattedStringConverter.cs" Link="Converters\FromObjectToFormattedStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\FromStringToCasedStringConverter.cs" Link="Converters\FromStringToCasedStringConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\MultiConverter.cs" Link="Converters\MultiConverter.cs" />
+		<Compile Include="..\View.Uno\Converters\NullConverter.cs" Link="Converters\NullConverter.cs" />
+
+		<Compile Include="..\View.Uno\DataTemplateSelectors\TypesDataTemplateSelector.cs" Link="DataTemplateSelectors\TypesDataTemplateSelector.cs" />
+		
+		<Compile Include="..\View.Uno\Extensions\BindableVisualState\BindableVisualState.cs" Link="Extensions\BindableVisualState\BindableVisualState.cs" />
+		<Compile Include="..\View.Uno\Extensions\ComboBox\ComboBoxSynchronizerBehavior.cs" Link="Extensions\ComboBox\ComboBoxSynchronizerBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\ControlAutoFocus\ControlExtensions.AutoFocus.cs" Link="Extensions\ControlAutoFocus\ControlExtensions.AutoFocus.cs" />
+		<Compile Include="..\View.Uno\Extensions\ControlGotFocus\ControlExtensions.GotFocusBehavior.cs" Link="Extensions\ControlGotFocus\ControlExtensions.GotFocusBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\ControlLostFocus\ControlExtensions.LostFocusBehavior.cs" Link="Extensions\ControlLostFocus\ControlExtensions.LostFocusBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\ExpandIntoOverscroll\ExpandIntoOverscrollBehavior.cs" Link="Extensions\ExpandIntoOverscroll\ExpandIntoOverscrollBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\Hyperlink\HyperlinkExtensions.Command.cs" Link="Extensions\Hyperlink\HyperlinkExtensions.Command.cs" />
+		<Compile Include="..\View.Uno\Extensions\InputPane\InputPaneExtensions.PanIntoView.cs" Link="Extensions\InputPane\InputPaneExtensions.PanIntoView.cs" />
+		<Compile Include="..\View.Uno\Extensions\ListView\GroupedCollectionBehavior.cs" Link="Extensions\ListView\GroupedCollectionBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\ListView\ListViewBaseExtensions.BringSelectedItemIntoView.cs" Link="Extensions\ListView\ListViewBaseExtensions.BringSelectedItemIntoView.cs" />
+		<Compile Include="..\View.Uno\Extensions\ListView\ListViewBaseExtensions.Command.cs" Link="Extensions\ListView\ListViewBaseExtensions.Command.cs" />
+		<Compile Include="..\View.Uno\Extensions\ListView\ListViewBaseMultiColumnExtension.cs" Link="Extensions\ListView\ListViewBaseMultiColumnExtension.cs" />
+		<Compile Include="..\View.Uno\Extensions\ListView\ListViewBaseMultipleSelectionBehavior.cs" Link="Extensions\ListView\ListViewBaseMultipleSelectionBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\MultipleTap\MultipleTapExtension.cs" Link="Extensions\MultipleTap\MultipleTapExtension.cs" />
+		<Compile Include="..\View.Uno\Extensions\PasswordBox\PasswordBoxBehavior.cs" Link="Extensions\PasswordBox\PasswordBoxBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\Rect\RectExtensions.cs" Link="Extensions\Rect\RectExtensions.cs" />
+		<Compile Include="..\View.Uno\Extensions\ScrollViewer\ScrollViewerExtensions.ScrollIndicatorStyle.cs" Link="Extensions\ScrollViewer\ScrollViewerExtensions.ScrollIndicatorStyle.cs" />
+		<Compile Include="..\View.Uno\Extensions\ScrollViewer\ScrollViewerExtensions.UWP.cs" Link="Extensions\ScrollViewer\ScrollViewerExtensions.WinUI.cs" />
+		<Compile Include="..\View.Uno\Extensions\SplitView\SplitViewBehavior.cs" Link="Extensions\SplitView\SplitViewBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\SplitView\SplitViewExtensions.cs" Link="Extensions\SplitView\SplitViewExtensions.cs" />
+		<Compile Include="..\View.Uno\Extensions\StickyGroupHeader\StickyGroupHeaderBehavior.cs" Link="Extensions\StickyGroupHeader\StickyGroupHeaderBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\TextBlock\HtmlTextBlockBehavior.cs" Link="Extensions\TextBlock\HtmlTextBlockBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\TextBlock\HtmlTextBlockBehavior.Properties.cs" Link="Extensions\TextBlock\HtmlTextBlockBehavior.Properties.cs" />
+		<Compile Include="..\View.Uno\Extensions\TextBlock\TextBlockBehavior.cs" Link="Extensions\TextBlock\TextBlockBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\TextBox\TextBoxBehavior.cs" Link="Extensions\TextBox\TextBoxBehavior.cs" />
+		<Compile Include="..\View.Uno\Extensions\TextBox\TextBoxBehavior.UWP.cs" Link="Extensions\TextBox\TextBoxBehavior.WinUI.cs" />
+
+		<Compile Include="..\View.Uno\Internal\MainDispatcher\MainDispatcherScheduler.cs" Link="Internal\MainDispatcher\MainDispatcherScheduler.cs" />
+		<Compile Include="..\View.Uno\Internal\MainDispatcher\MainDispatcherScheduler.WASM.cs" Link="Internal\MainDispatcher\MainDispatcherScheduler.WinUI.cs" />
+		<Compile Include="..\View.Uno\Internal\ActionDisposable.cs" Link="Internal\ActionDisposable.cs" />
+		<Compile Include="..\View.Uno\Internal\DependencyObjectExtensions.cs" Link="Internal\DependencyObjectExtensions.cs" />
+		<Compile Include="..\View.Uno\Internal\ObservableExtensions.cs" Link="Internal\ObservableExtensions.cs" />
+		<Compile Include="..\View.Uno\Internal\PropertyMetadataHelper.cs" Link="Internal\PropertyMetadataHelper.cs" />
+		<Compile Include="..\View.Uno\Internal\SizeExtensions.cs" Link="Internal\SizeExtensions.cs" />
+		<Compile Include="..\View.Uno\Internal\Windows.UI.CoreDispatcher.cs" Link="Internal\Windows.UI.CoreDispatcher.cs" />
+
+		<Compile Include="..\View.Uno\Panels\LandscapeUprightPanel\LandscapeUprightPanel.UWP.cs" Link="Panels\LandscapeUprightPanel\LandscapeUprightPanel.cs" />
+		<Compile Include="..\View.Uno\Panels\ProportionalPanel\ProportionalPanel.cs" Link="Panels\ProportionalPanel\ProportionalPanel.cs" />
+		<Compile Include="..\View.Uno\Panels\SnapPanel\SnapAnchor.cs" Link="Panels\SnapPanel\SnapAnchor.cs" />
+		<Compile Include="..\View.Uno\Panels\SnapPanel\SnapPanel.cs" Link="Panels\SnapPanel\SnapPanel.cs" />
+		<Compile Include="..\View.Uno\Panels\SnapPanel\SnapPoint.cs" Link="Panels\SnapPanel\SnapPoint.cs" />
+		<Compile Include="..\View.Uno\Panels\SnapPanel\SnapPointInfo.cs" Link="Panels\SnapPanel\SnapPointInfo.cs" />
+		<Compile Include="..\View.Uno\Panels\StarStackPanel\StarStackPanel.cs" Link="Panels\StarStackPanel\StarStackPanel.cs" />
+	</ItemGroup>
+
+</Project>

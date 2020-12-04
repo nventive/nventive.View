@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using Chinook.View.Converters.PrettyDateConverter.Resources;
-#if !WINDOWS_UWP && !__ANDROID__ && !__IOS__ && !__WASM__
+#if !WINDOWS_UWP && !HAS_WINUI && !__ANDROID__ && !__IOS__ && !__WASM__
 using Uno.Localisation;
 #else
 using CultureInfo = System.String;

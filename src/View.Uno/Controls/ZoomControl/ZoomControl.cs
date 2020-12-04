@@ -1,19 +1,31 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System;
 using System.Collections.Generic;
 using System.IO;
 using Windows.Foundation;
+using Uno.Extensions;
+using Uno.Logging;
+using Uno.Disposables;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Markup;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Imaging;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
-using Uno.Extensions;
-using Uno.Logging;
-using Uno.Disposables;
+#endif
 #if WINDOWS_UWP
 using IFrameworkElement = Windows.UI.Xaml.FrameworkElement;
 using View = Windows.UI.Xaml.FrameworkElement;
+using Size = Windows.Foundation.Size;
+#elif HAS_WINUI
+using IFrameworkElement = Microsoft.UI.Xaml.FrameworkElement;
+using View = Microsoft.UI.Xaml.FrameworkElement;
 using Size = Windows.Foundation.Size;
 #elif __ANDROID__ || __IOS__ || __WASM__
 using IFrameworkElement = Windows.UI.Xaml.FrameworkElement;
@@ -58,7 +70,7 @@ namespace Chinook.View.Controls
 			Unloaded += OnUnloaded;
 		}
 
-		#region ViewPort
+#region ViewPort
 
 		/// <summary>
 		/// Gets or sets a value that indicates the area of the Content visible through the viewport. 
@@ -100,9 +112,9 @@ namespace Chinook.View.Controls
 			}
 		}
 
-		#endregion
+#endregion
 
-		#region Stretch
+#region Stretch
 
 		/// <summary>
 		///	Gets or sets a value that describes how the Content should be stretched to fill the viewport.
@@ -166,9 +178,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty StretchProperty =
 			DependencyProperty.Register("Stretch", typeof(Stretch), typeof(ZoomControl), new PropertyMetadata(Stretch.None, (s, e) => (s as ZoomControl)?.OnStretchChanged((Stretch)e.OldValue, (Stretch)e.NewValue)));
 
-		#endregion
+#endregion
 
-		#region AspectRatio
+#region AspectRatio
 
 		/// <summary>
 		/// Gets or sets a value that describes the aspect ratio ZoomControl should preserve.
@@ -186,7 +198,7 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty AspectRatioProperty =
 			DependencyProperty.Register("AspectRatio", typeof(Size), typeof(ZoomControl), new PropertyMetadata(Size.Empty, (s, e) => (s as ZoomControl)?.OnAspectRatioChanged((Size)e.OldValue, (Size)e.NewValue)));
 
-		#endregion
+#endregion
 
 		/// <summary>
 		/// Resets the ViewPort to it's initial value (resets scroll offset and re-applies aspect ratio).

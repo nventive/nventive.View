@@ -1,11 +1,16 @@
-﻿#if __ANDROID__ || __IOS__ || __WASM__ || WINDOWS_UWP
+﻿#if __ANDROID__ || __IOS__ || __WASM__ || WINDOWS_UWP || HAS_WINUI
 using Windows.Foundation;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using Microsoft.Extensions.Logging;
 using Uno.Extensions;
 using Uno.Logging;
 using System.ComponentModel;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+#else
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+#endif
 
 namespace Chinook.View.Controls
 {

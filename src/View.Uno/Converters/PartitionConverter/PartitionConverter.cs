@@ -7,6 +7,8 @@ using Uno.Extensions;
 using Uno.Logging;
 #if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
 using Windows.UI.Xaml.Markup;
+#elif HAS_WINUI
+using Microsoft.UI.Xaml.Markup;
 #else
 using System.Windows.Markup;
 #endif
@@ -27,7 +29,7 @@ namespace Chinook.View.Converters
 	/// A default value can be provided, in which case it will act as a partition itself, matching any other element of the set.
 	/// If both <see cref="Partitions"/> and a <see cref="PartitionStrategy"/> are provided, the <see cref="Partitions" /> have precedence.
 	/// </remarks>
-#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 	[ContentProperty(Name = nameof(Partitions))]
 #else
 	[ContentProperty(nameof(Partitions))]

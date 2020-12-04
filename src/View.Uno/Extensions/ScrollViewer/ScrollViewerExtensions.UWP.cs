@@ -1,4 +1,4 @@
-﻿#if WINDOWS_UWP
+﻿#if WINDOWS_UWP || HAS_WINUI
 using System;
 using System.Reactive;
 using System.Reactive.Concurrency;
@@ -7,11 +7,17 @@ using System.Reactive.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Windows.Foundation;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
-
+#endif
 namespace Chinook.View.Extensions
 {
 	static public partial class ScrollViewerExtensions

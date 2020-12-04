@@ -1,9 +1,17 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System.Windows.Input;
+using Windows.UI.Text;
+#if HAS_WINUI
+using Microsoft.UI.Text;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Documents;
+using Microsoft.UI.Xaml.Media;
+#else
 using Windows.UI.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Media;
+#endif
 
 namespace Chinook.View.Extensions
 {

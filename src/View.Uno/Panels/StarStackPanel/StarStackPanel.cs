@@ -4,13 +4,19 @@ using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-#if !WINDOWS_UWP && !__ANDROID__ && !__IOS__ && !__WASM__
+#if !WINDOWS_UWP && !__ANDROID__ && !__IOS__ && !__WASM__ && !HAS_WINUI
 using System.Windows;
 using System.Windows.Controls;
+#elif HAS_WINUI
+using Windows.Foundation;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using XamlUIElement = Microsoft.UI.Xaml.UIElement;
 #else
 using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using XamlUIElement = Windows.UI.Xaml.UIElement;
 #endif
 #if __ANDROID__ || __IOS__ || __WASM__
 using DependencyObject = System.Object;
@@ -445,7 +451,7 @@ namespace Chinook.View.Controls
 
 			if (sizes != null && sizes.Length > 0)
 			{
-				var index = Children.IndexOf((Windows.UI.Xaml.UIElement)child);
+				var index = Children.IndexOf((XamlUIElement)child);
 				if (index >= 0 && sizes.Length > index)
 				{
 					return sizes[index];

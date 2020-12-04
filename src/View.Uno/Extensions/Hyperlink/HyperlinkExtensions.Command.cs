@@ -1,4 +1,4 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,8 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Documents;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Documents;
+#endif
 
 namespace Chinook.View.Extensions
 {

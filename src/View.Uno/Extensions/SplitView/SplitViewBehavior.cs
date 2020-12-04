@@ -1,14 +1,21 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using Uno.Extensions;
-using Windows.UI.Xaml.Controls.Primitives;
 using Uno.Logging;
 using System.Reactive.Linq;
 #if WINDOWS_UWP
 using IFrameworkElement = Windows.UI.Xaml.FrameworkElement;
 #endif
-#if WINDOWS_UWP
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
+#else
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Controls.Primitives;
+#endif
+
+#if WINDOWS_UWP || HAS_WINUI
 #elif __IOS__
 using UIKit;
 using Uno.UI.Controls;

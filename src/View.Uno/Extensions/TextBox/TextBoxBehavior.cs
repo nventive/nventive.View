@@ -1,4 +1,4 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__
 using System;
 using System.Windows.Input;
 using Uno.Logging;
@@ -7,13 +7,21 @@ using System.Globalization;
 using Microsoft.Extensions.Logging;
 using Uno.Extensions;
 using Windows.System;
-using Windows.UI.Xaml.Controls;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Input;
+#else
 using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
+#endif
 
 namespace Chinook.View.Extensions
 {
-	[Windows.UI.Xaml.Data.Bindable]
+	[Bindable]
 	public partial class TextBoxBehavior
 	{
 		private static readonly Lazy<ILogger> _log = new Lazy<ILogger>(() => typeof(TextBoxBehavior).Log(), true);

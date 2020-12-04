@@ -1,4 +1,4 @@
-﻿#if WINDOWS_UWP
+﻿#if WINDOWS_UWP || HAS_WINUI
 using System;
 using System.Collections.Generic;
 using System.Linq;

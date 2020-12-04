@@ -1,13 +1,19 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using Uno.Extensions;
-using Windows.UI.Xaml.Markup;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml;
 using Uno;
+using Uno.Extensions;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Markup;
+#else
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Markup;
+#endif
 
 namespace Chinook.View.DataTemplateSelectors
 {
@@ -67,7 +73,7 @@ namespace Chinook.View.DataTemplateSelectors
 			return name;
 		}
 
-		#region IList
+#region IList
 		private IList<MatchType> _inner = new List<MatchType>();
 
 		public IEnumerator<MatchType> GetEnumerator()
@@ -135,7 +141,7 @@ namespace Chinook.View.DataTemplateSelectors
 			get { return _inner[index]; }
 			set { _inner[index] = value; }
 		}
-		#endregion
+#endregion
 	}
 
 	[ContentProperty(Name = "DataTemplate")]

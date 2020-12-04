@@ -1,10 +1,14 @@
-﻿#if WINDOWS_UWP
+﻿#if WINDOWS_UWP || HAS_WINUI
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+#else
 using Windows.UI.Xaml;
+#endif
 
 namespace Chinook.View
 {

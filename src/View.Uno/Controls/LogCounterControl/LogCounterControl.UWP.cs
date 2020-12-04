@@ -1,14 +1,22 @@
-﻿#if WINDOWS_UWP
+﻿#if WINDOWS_UWP || HAS_WINUI
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using Microsoft.Extensions.Logging;
+using Uno.Disposables;
 using Windows.UI.Core;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
+using WindowSizeChangedEventArgs = Microsoft.UI.Xaml.WindowSizeChangedEventArgs;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
-using Uno.Disposables;
+using WindowSizeChangedEventArgs = Windows.UI.Core.WindowSizeChangedEventArgs;
+#endif
 
 namespace Chinook.View.Controls
 {

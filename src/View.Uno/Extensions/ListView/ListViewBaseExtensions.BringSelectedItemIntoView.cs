@@ -1,9 +1,14 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__
 using System;
 using System.Collections.Generic;
 using System.Text;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+#endif
 #if WINDOWS_UWP
 using IDependencyObject = Windows.UI.Xaml.DependencyObject;
 #endif
@@ -63,7 +68,7 @@ namespace Chinook.View.Extensions
 
 		private static void OnBringSelectedIntoViewAlignmentChanged(object d, DependencyPropertyChangedEventArgs e)
 		{
-			var listView = (Windows.UI.Xaml.Controls.ListViewBase)d;
+			var listView = (ListViewBase)d;
 
 			if ((BringIntoViewAlignment)e.NewValue == BringIntoViewAlignment.None)
 			{
@@ -78,7 +83,7 @@ namespace Chinook.View.Extensions
 
 		private static void OnListViewSelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			var listView = (Windows.UI.Xaml.Controls.ListViewBase)sender;
+			var listView = (ListViewBase)sender;
 			var selectedItem = listView.SelectedItem;
 
 			if (selectedItem != null)
@@ -101,4 +106,4 @@ namespace Chinook.View.Extensions
 		}
 	}
 }
-	#endif
+#endif

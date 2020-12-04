@@ -1,4 +1,4 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +7,13 @@ using System.Threading.Tasks;
 using System.Windows;
 using Uno.Extensions;
 using Uno.Logging;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+#endif
 
 namespace Chinook.View.Controls
 {
@@ -29,7 +34,7 @@ namespace Chinook.View.Controls
 			Unloaded += OnControlUnloaded;
 		}
 
-		#region IsAnimating DEPENDENCY PROPERTY
+#region IsAnimating DEPENDENCY PROPERTY
 
 		/// <summary>
 		/// Sets whether the control is in the animating state.
@@ -55,7 +60,7 @@ namespace Chinook.View.Controls
 			}
 		}
 
-		#endregion
+#endregion
 
 		/// <summary>
 		/// Whether the animation should be disabled while the control is unloaded. 

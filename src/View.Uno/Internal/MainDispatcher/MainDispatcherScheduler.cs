@@ -1,4 +1,4 @@
-﻿#if __ANDROID__ || __IOS__ || __WASM__
+﻿#if __ANDROID__ || __IOS__ || __WASM__ || HAS_WINUI
 using System;
 using System.Reactive.Concurrency;
 using System.Reactive.Disposables;

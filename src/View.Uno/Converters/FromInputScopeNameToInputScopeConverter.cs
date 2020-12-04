@@ -1,8 +1,12 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System;
 using System.Collections.Generic;
 using System.Text;
+#if HAS_WINUI
+using Microsoft.UI.Xaml.Input;
+#else
 using Windows.UI.Xaml.Input;
+#endif
 
 namespace Chinook.View.Converters
 {

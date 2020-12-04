@@ -1,13 +1,18 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System.Windows.Input;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+#endif
 
 namespace Chinook.View.Controls
 {
 	public partial class ParallaxListView : Control
 	{
-		#region HeaderBackgroundTemplate Property
+#region HeaderBackgroundTemplate Property
 
 		public DataTemplate HeaderBackgroundTemplate
 		{
@@ -18,9 +23,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty HeaderBackgroundTemplateProperty =
 			DependencyProperty.Register("HeaderBackgroundTemplate", typeof(DataTemplate), typeof(ParallaxListView), new PropertyMetadata(null));
 
-		#endregion
+#endregion
 
-		#region HeaderHeight Property
+#region HeaderHeight Property
 
 		public double HeaderHeight
 		{
@@ -31,9 +36,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty HeaderHeightProperty =
 			DependencyProperty.Register("HeaderHeight", typeof(double), typeof(ParallaxListView), new PropertyMetadata(1));
 
-		#endregion
+#endregion
 
-		#region IsHeaderForegroundFading Property
+#region IsHeaderForegroundFading Property
 
 		public bool IsNonInteractiveHeaderForegroundFading
 		{
@@ -44,9 +49,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty IsNonInteractiveHeaderForegroundFadingProperty =
 			DependencyProperty.Register("IsNonInteractiveHeaderForegroundFading", typeof(bool), typeof(ParallaxListView), new PropertyMetadata(false));
 
-		#endregion
+#endregion
 
-		#region ItemCommand Property
+#region ItemCommand Property
 
 		public ICommand ItemCommand
 		{
@@ -57,9 +62,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty ItemCommandProperty =
 			DependencyProperty.Register("ItemCommand", typeof(ICommand), typeof(ParallaxListView), new PropertyMetadata(null));
 
-		#endregion
+#endregion
 
-		#region ItemContainerStyle Property
+#region ItemContainerStyle Property
 
 		public Style ItemContainerStyle
 		{
@@ -70,9 +75,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty ItemContainerStyleProperty =
 			DependencyProperty.Register("ItemContainerStyle", typeof(Style), typeof(ParallaxListView), new PropertyMetadata(null));
 
-		#endregion
+#endregion
 
-		#region ItemsSource Property
+#region ItemsSource Property
 
 		public object ItemsSource
 		{
@@ -83,9 +88,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty ItemsSourceProperty =
 			DependencyProperty.Register("ItemsSource", typeof(object), typeof(ParallaxListView), new PropertyMetadata(null));
 
-		#endregion
+#endregion
 
-		#region ItemTemplate Property
+#region ItemTemplate Property
 
 		public DataTemplate ItemTemplate
 		{
@@ -96,9 +101,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty ItemTemplateProperty =
 			DependencyProperty.Register("ItemTemplate", typeof(DataTemplate), typeof(ParallaxListView), new PropertyMetadata(null));
 
-		#endregion
+#endregion
 
-		#region ItemTemplateSelector Property
+#region ItemTemplateSelector Property
 
 		public DataTemplateSelector ItemTemplateSelector
 		{
@@ -109,9 +114,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty ItemTemplateSelectorProperty =
 			DependencyProperty.Register("ItemTemplateSelector", typeof(DataTemplateSelector), typeof(ParallaxListView), new PropertyMetadata(null));
 
-		#endregion
+#endregion
 
-		#region NonInteractiveHeaderForegroundTemplate Property
+#region NonInteractiveHeaderForegroundTemplate Property
 
 		public DataTemplate NonInteractiveHeaderForegroundTemplate
 		{
@@ -122,9 +127,9 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty NonInteractiveHeaderForegroundTemplateProperty =
 			DependencyProperty.Register("NonInteractiveHeaderForegroundTemplate", typeof(DataTemplate), typeof(ParallaxListView), new PropertyMetadata(null));
 
-		#endregion
+#endregion
 
-		#region ScrollStatus Property
+#region ScrollStatus Property
 
 		public string ScrollStatus
 		{
@@ -135,7 +140,7 @@ namespace Chinook.View.Controls
 		public static readonly DependencyProperty ScrollStatusProperty =
 			DependencyProperty.Register("ScrollStatus", typeof(string), typeof(ParallaxListView), new PropertyMetadata("Collasped"));
 
-		#endregion
+#endregion
 	}
 }
 #endif

@@ -8,6 +8,8 @@ using System.Reactive.Concurrency;
 using System.Reactive.Disposables;
 #if WINDOWS_UWP || __WASM__
 using Windows.UI.Xaml;
+#elif HAS_WINUI
+using Microsoft.UI.Xaml;
 #elif __ANDROID__ || __IOS__
 using Windows.UI.Xaml;
 using FrameworkElement = Windows.UI.Xaml.FrameworkElement;

@@ -1,4 +1,4 @@
-﻿#if NETSTANDARD2_0
+﻿#if NETSTANDARD2_0 || HAS_WINUI
 using System;
 using System.Reactive.Concurrency;
 using System.Reactive.Disposables;

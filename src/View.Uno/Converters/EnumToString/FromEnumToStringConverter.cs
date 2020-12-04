@@ -10,6 +10,9 @@ using GenericCulture = System.String;
 using Uno.UI;
 using GenericCulture = System.String;
 using Windows.UI.Xaml.Data;
+#elif HAS_WINUI
+using Microsoft.UI.Xaml.Data;
+using GenericCulture = System.String;
 #else
 using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
@@ -57,7 +60,7 @@ namespace Chinook.View.Converters
 			switch (this.CharacterCasing)
 			{
 				case CharacterCasingOption.UpperCase:
-#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 					output = output.ToUpper();
 #else
 					output = output.ToUpper(culture);
@@ -65,7 +68,7 @@ namespace Chinook.View.Converters
 					break;
 
 				case CharacterCasingOption.LowerCase:
-#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 					output = output.ToLower();
 #else
 					output = output.ToLower(culture);

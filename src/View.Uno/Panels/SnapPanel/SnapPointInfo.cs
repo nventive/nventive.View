@@ -1,4 +1,4 @@
-﻿#if NETFX_CORE
+﻿#if NETFX_CORE || HAS_WINUI
 using System;
 using System.Collections.Generic;
 using System.Text;

@@ -1,16 +1,22 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__
 using System;
 using System.Windows.Input;
 using Uno.Logging;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
 using System.Linq;
 using Microsoft.Extensions.Logging;
 using Uno.Extensions;
 using Windows.System;
 using System.Reactive.Linq;
 using System.Reactive.Concurrency;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
+#else
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
+#endif
 
 namespace Chinook.View.Extensions
 {

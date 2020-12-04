@@ -1,19 +1,25 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Windows.UI.ViewManagement;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
+#endif
 
 namespace Chinook.View.Extensions
 {
 	public partial class InputPaneExtensions
 	{
-		#region Dependency Property: PanIntoView
+#region Dependency Property: PanIntoView
 		/// <summary>
 		/// Get value of PanIntoView
 		/// </summary>
@@ -39,9 +45,9 @@ namespace Chinook.View.Extensions
 		/// </summary>
 		public static readonly DependencyProperty PanIntoViewProperty =
 			DependencyProperty.RegisterAttached("PanIntoView", typeof(bool), typeof(InputPaneExtensions), new PropertyMetadata(false, PanIntoViewChanged));
-		#endregion
+#endregion
 
-		#region Dependency Property: PreviousMargin
+#region Dependency Property: PreviousMargin
 		/// <summary>
 		/// Get value of PreviousMargin
 		/// </summary>
@@ -68,7 +74,7 @@ namespace Chinook.View.Extensions
 		/// </summary>
 		private static readonly DependencyProperty PreviousMarginProperty =
 			DependencyProperty.RegisterAttached("PreviousMargin", typeof(Thickness), typeof(InputPaneExtensions), new PropertyMetadata(default(Thickness)));
-		#endregion
+#endregion
 
 		/// <summary>
 		/// Event raised when PanIntoViewChanged is changed. It only triggers once

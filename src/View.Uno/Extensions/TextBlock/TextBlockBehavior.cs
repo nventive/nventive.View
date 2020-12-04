@@ -4,7 +4,10 @@ using System.Linq;
 using Uno.Extensions;
 using System.Text.RegularExpressions;
 using System.Collections.Generic;
-#if !WINDOWS_UWP
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+#elif !WINDOWS_UWP
 using System.Windows;
 using System.Windows.Controls;
 #else

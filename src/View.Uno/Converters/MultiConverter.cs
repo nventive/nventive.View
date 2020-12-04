@@ -14,6 +14,10 @@ using Windows.UI.Xaml;
 using GenericCulture = System.String;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Markup;
+#elif HAS_WINUI
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Markup;
+using GenericCulture = System.String;
 #else
 using System.Windows.Data;
 using System.Windows.Markup;
@@ -26,13 +30,13 @@ namespace Chinook.View.Converters
 	/// A converter that chains multiple converters in order to provide a result.  Each provided will be 
 	/// executed in the order they are provided.
 	/// 
-	/// ​​Converters (List<IValueConverter>) : The list of all converters to chain.
+	/// ​​Converters (List&lt;IValueConverter&gt;) : The list of all converters to chain.
 	/// 
 	/// If no converters are provided, MultiConverter should return the initial value.
 	/// 
 	/// This converter may be used when we need multiple steps of conversion from the initial value to the result.
 	/// </summary>
-#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 	[ContentProperty(Name = "Converters")]
 #else
 	[ContentProperty("Converters")]

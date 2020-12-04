@@ -1,23 +1,30 @@
-﻿#if WINDOWS_UWP
+﻿#if WINDOWS_UWP || HAS_WINUI
 using System;
 using System.Net;
 using System.Windows;
 using Uno.Extensions;
 using System.Windows.Input;
 using Uno.Logging;
+using Uno.Disposables;
+using System.Reactive.Concurrency;
+using System.Reactive.Linq;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Uno.Disposables;
-using System.Reactive.Concurrency;
-using System.Reactive.Linq;
+#endif
 
 namespace Chinook.View.Extensions
 {
 	public partial class PasswordBoxBehavior : DependencyObject
 	{
-		#region Attached property: NextControl
+#region Attached property: NextControl
 		public static Control GetNextControl(PasswordBox obj)
 		{
 			return obj.GetValue(NextControlProperty) as Control;
@@ -42,9 +49,9 @@ namespace Chinook.View.Extensions
 
 			GetOrCreateBehavior(passwordBox);
 		}
-		#endregion
+#endregion
 
-		#region Attached property: Password
+#region Attached property: Password
 
 		public static readonly DependencyProperty PasswordProperty =
 			DependencyProperty.RegisterAttached("Password", typeof(string), typeof(PasswordBoxBehavior), new PropertyMetadata(default(string), OnPasswordChanged));
@@ -69,9 +76,9 @@ namespace Chinook.View.Extensions
 			textBox.SetValue(PasswordProperty, value);
 		}
 
-		#endregion
+#endregion
 
-		#region Attached property: AutoUpdateBindingDelay
+#region Attached property: AutoUpdateBindingDelay
 
 		public static TimeSpan GetAutoUpdateBindingDelay(PasswordBox obj)
 		{
@@ -104,9 +111,9 @@ namespace Chinook.View.Extensions
 			}
 		}
 
-		#endregion
+#endregion
 
-		#region Attached property: IsAutoLostFocusEnabled
+#region Attached property: IsAutoLostFocusEnabled
 
 		public static bool GetIsAutoLostFocusEnabled(PasswordBox obj)
 		{
@@ -132,9 +139,9 @@ namespace Chinook.View.Extensions
 			GetOrCreateBehavior(textBox);
 		}
 
-		#endregion
+#endregion
 
-		#region Attached property: IsClearOnSubmitEnabled
+#region Attached property: IsClearOnSubmitEnabled
 
 		public static bool GetIsClearOnSubmitEnabled(PasswordBox obj)
 		{
@@ -160,9 +167,9 @@ namespace Chinook.View.Extensions
 			GetOrCreateBehavior(textBox);
 		}
 
-		#endregion
+#endregion
 
-		#region Attached property: Behavior (private)
+#region Attached property: Behavior (private)
 
 		private static PasswordBoxBehavior GetOrCreateBehavior(PasswordBox obj)
 		{
@@ -193,7 +200,7 @@ namespace Chinook.View.Extensions
 		private static readonly DependencyProperty BehaviorProperty =
 			DependencyProperty.RegisterAttached("Behavior", typeof(PasswordBoxBehavior), typeof(PasswordBoxBehavior), new PropertyMetadata(null));
 
-		#endregion
+#endregion
 
 		private IDisposable Attach()
 		{

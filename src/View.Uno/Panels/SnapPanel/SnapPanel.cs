@@ -1,13 +1,19 @@
-﻿#if NETFX_CORE
+﻿#if NETFX_CORE || HAS_WINUI
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Uno.Extensions;
 using Windows.Foundation;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
+#endif
 
 namespace Chinook.View.Controls
 {

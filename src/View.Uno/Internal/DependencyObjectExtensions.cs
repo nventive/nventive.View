@@ -10,6 +10,12 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Controls;
 using _DependencyObject = Windows.UI.Xaml.DependencyObject;
 using _FrameworkElement = Windows.UI.Xaml.FrameworkElement;
+#elif HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Controls;
+using _DependencyObject = Microsoft.UI.Xaml.DependencyObject;
+using _FrameworkElement = Microsoft.UI.Xaml.FrameworkElement;
 #elif __ANDROID__ || __IOS__ || __WASM__
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
@@ -19,6 +25,8 @@ using _FrameworkElement = Windows.UI.Xaml.FrameworkElement;
 #endif
 #if WINDOWS_UWP || __WASM__
 using _View = Windows.UI.Xaml.FrameworkElement;
+#elif HAS_WINUI
+using _View = Microsoft.UI.Xaml.FrameworkElement;
 #elif __ANDROID__
 using _View = Android.Views.View;
 #elif __IOS__
@@ -70,7 +78,7 @@ namespace Chinook.View
 					});
 				});
 			});
-#elif WINDOWS_UWP
+#elif WINDOWS_UWP || HAS_WINUI
 			return Observable.Create<DependencyPropertyChanged<TValue>>(observer =>
 			{
 				var oldValue = (TValue)instance.GetValue(property);

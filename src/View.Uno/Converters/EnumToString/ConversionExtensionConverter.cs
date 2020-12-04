@@ -11,6 +11,9 @@ using GenericCulture = System.String;
 #elif __ANDROID__ || __IOS__ || __WASM__
 using GenericCulture = System.String;
 using Windows.UI.Xaml.Data;
+#elif HAS_WINUI
+using Microsoft.UI.Xaml.Data;
+using GenericCulture = System.String;
 #else
 using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
@@ -45,7 +48,7 @@ namespace Chinook.View.Converters
 				return null;
 			}
 
-#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 			if (string.IsNullOrWhiteSpace(culture))
 			{
 				return _extensions.To(_extensions.Conversion(value), targetType);

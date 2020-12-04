@@ -1,14 +1,19 @@
-﻿#if WINDOWS_UWP
+﻿#if WINDOWS_UWP || HAS_WINUI
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Windows.Input;
 using Uno.Extensions;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
 using System.Runtime.CompilerServices;
 using Uno.Logging;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+#else
+using Windows.UI.Xaml;
+using Windows.UI.Xaml.Controls;
+#endif
 
 namespace Chinook.View.Extensions
 {
@@ -19,7 +24,7 @@ namespace Chinook.View.Extensions
 	{
 		private static readonly ConditionalWeakTable<ListViewBase, ItemClickEventHandler> _registeredItemClickEventHandler = new ConditionalWeakTable<ListViewBase, ItemClickEventHandler>();
 
-		#region Attached Properties
+#region Attached Properties
 
 		/// <summary>
 		/// An ICommand that can be attached to a <see cref="ListViewBase"/> control.
@@ -54,7 +59,7 @@ namespace Chinook.View.Extensions
 			obj.SetValue(CommandParameterProperty, value);
 		}
 
-		#endregion
+#endregion
 
 		private static void OnCommandChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
 		{

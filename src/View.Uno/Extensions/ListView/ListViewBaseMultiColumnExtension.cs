@@ -1,10 +1,15 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+#endif
 
 namespace Chinook.View.Extensions
 {
@@ -14,7 +19,7 @@ namespace Chinook.View.Extensions
 	/// </summary>
 	public class ListViewBaseMultiColumnExtension
 	{
-		#region NumberOfColumns
+#region NumberOfColumns
 		/// <summary>
 		/// Get the NumberOfColumns, which defines how many items appear in each row of list view
 		/// </summary>
@@ -44,9 +49,9 @@ namespace Chinook.View.Extensions
 		{
 			SubscribeToSizeChanged(listView, numberOfColumns, GetItemSizeRatio(listView), GetMarginBetweenColumns(listView));
 		}
-		#endregion
+#endregion
 
-		#region ItemSizeRatio
+#region ItemSizeRatio
 		/// <summary>
 		/// Get the ItemSizeRatio, which defines the height/ width ratio of each list view template
 		/// </summary>
@@ -76,9 +81,9 @@ namespace Chinook.View.Extensions
 		{
 			SubscribeToSizeChanged(listView, GetNumberOfColumns(listView), itemSizeRatio, GetMarginBetweenColumns(listView));
 		}
-		#endregion
+#endregion
 
-		#region MarginBetweenColumns
+#region MarginBetweenColumns
 		/// <summary>
 		/// Get the MarginBetweenColumns
 		/// </summary>
@@ -108,7 +113,7 @@ namespace Chinook.View.Extensions
 		{
 			SubscribeToSizeChanged(listView, GetNumberOfColumns(listView), GetItemSizeRatio(listView), marginBetweenColumns);
 		}
-		#endregion
+#endregion
 
 		/// <summary>
 		/// Any of the property value change will trigger this method which will trigger Update the size of list view template

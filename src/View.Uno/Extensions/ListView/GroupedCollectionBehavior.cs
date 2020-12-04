@@ -1,12 +1,18 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
+#endif
 #if __ANDROID__ || __IOS__
 using _ListViewBase = Windows.UI.Xaml.DependencyObject;
 #if __IOS__
@@ -14,6 +20,8 @@ using _ListViewLegacy = Uno.UI.Controls.Legacy.ListViewBase;
 #else
 using _ListViewLegacy = Uno.UI.Controls.Legacy.ListView;
 #endif
+#elif HAS_WINUI
+using _ListViewBase = Microsoft.UI.Xaml.Controls.ListViewBase;
 #else
 using _ListViewBase = Windows.UI.Xaml.Controls.ListViewBase;
 #endif
@@ -58,10 +66,10 @@ namespace Chinook.View.Extensions
 
 				if (source == null)
 				{
-#if WINDOWS_UWP
+#if WINDOWS_UWP || HAS_WINUI
 					_listViewBase.ItemsSource = null; 
 #else
-					if (_listViewBase is Windows.UI.Xaml.Controls.ListViewBase listViewBase)
+					if (_listViewBase is ListViewBase listViewBase)
 					{
 						listViewBase.ItemsSource = null;
 					}
@@ -80,7 +88,7 @@ namespace Chinook.View.Extensions
 						IsSourceGrouped = true
 					};
 
-#if WINDOWS_UWP
+#if WINDOWS_UWP || HAS_WINUI
 					_listViewBase.ItemsSource = viewSource.View; 
 #else
 					if (_listViewBase is Windows.UI.Xaml.Controls.ListViewBase listViewBase)

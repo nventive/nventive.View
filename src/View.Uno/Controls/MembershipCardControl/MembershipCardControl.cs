@@ -1,4 +1,4 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,14 +6,23 @@ using System.Threading;
 using System.Threading.Tasks;
 using Uno.Extensions;
 using Uno.Logging;
-using Windows.UI.Xaml;
 using Windows.Devices.Sensors;
 using Windows.UI.ViewManagement;
+using Windows.UI.Core;
+using Uno.Disposables;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Input;
+using XamlWindow = Microsoft.UI.Xaml.Window;
+#else
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Core;
-using Uno.Disposables;
+using XamlWindow = Windows.UI.Xaml.Window;
+#endif
 
 namespace Chinook.View.Controls
 {
@@ -167,8 +176,8 @@ namespace Chinook.View.Controls
 
 		private void OnLoaded(object sender, RoutedEventArgs e)
 		{
-			ScreenHeight = Windows.UI.Xaml.Window.Current.Bounds.Height;
-			ScreenWidth = Windows.UI.Xaml.Window.Current.Bounds.Width;
+			ScreenHeight = XamlWindow.Current.Bounds.Height;
+			ScreenWidth = XamlWindow.Current.Bounds.Width;
 
 			VisualStateManager.GoToState(this, ClosedVisualState, useTransitions: true);
 
@@ -324,7 +333,7 @@ namespace Chinook.View.Controls
 
 				if (IsOtherPopupsClosed && isOpen)
 				{
-					foreach (var popup in VisualTreeHelper.GetOpenPopups(Windows.UI.Xaml.Window.Current))
+					foreach (var popup in VisualTreeHelper.GetOpenPopups(XamlWindow.Current))
 					{
 						popup.IsOpen = false;
 					}

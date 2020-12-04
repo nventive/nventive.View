@@ -11,6 +11,9 @@ using GenericCulture = System.String;
 #elif __ANDROID__ || __IOS__
 using GenericCulture = System.String;
 using Windows.UI.Xaml.Data;
+#elif HAS_WINUI
+using Microsoft.UI.Xaml.Data;
+using GenericCulture = System.String;
 #else
 using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;

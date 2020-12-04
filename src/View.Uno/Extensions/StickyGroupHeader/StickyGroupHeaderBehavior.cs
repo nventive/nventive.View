@@ -1,4 +1,4 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,12 +6,15 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using Uno.Extensions;
 using Uno.Extensions.Specialized;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Data;
+using _FrameworkElement = Microsoft.UI.Xaml.FrameworkElement;
+#else
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
-#if __ANDROID__ || __IOS__
-using _FrameworkElement = Windows.UI.Xaml.FrameworkElement;
-#else
 using _FrameworkElement = Windows.UI.Xaml.FrameworkElement;
 #endif
 

@@ -8,6 +8,8 @@ using System.Text;
 using Windows.UI.Xaml;
 #elif __ANDROID__ || __IOS__ || __WASM__
 using Visibility = Windows.UI.Xaml.Visibility;
+#elif HAS_WINUI
+using Microsoft.UI.Xaml;
 #else
 using System.Windows;
 #endif

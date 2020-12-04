@@ -1,13 +1,20 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__ || __WASM__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__ || __WASM__
 using System.Collections;
 using System.ComponentModel;
 using System;
 using System.Reflection;
 using Uno.Collections;
+#if HAS_WINUI
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Data;
+using SharedBinding = Microsoft.UI.Xaml.Data.Binding;
+#else
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Data;
 using SharedBinding = Windows.UI.Xaml.Data.Binding;
+#endif
 #if __ANDROID__ || __IOS__ || __WASM__
 using static Windows.UI.Xaml.DependencyObjectStore;
 #endif

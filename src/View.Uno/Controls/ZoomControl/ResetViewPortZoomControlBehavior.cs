@@ -1,14 +1,18 @@
-﻿#if WINDOWS_UWP || __ANDROID__ || __IOS__
+﻿#if WINDOWS_UWP || HAS_WINUI || __ANDROID__ || __IOS__
 using System;
 using System.Collections.Generic;
 using System.Text;
+#if HAS_WINUI
+using Microsoft.UI.Xaml;
+#else
 using Windows.UI.Xaml;
+#endif
 
 namespace Chinook.View.Controls
 {
 	public static partial class ResetViewPortZoomControlBehavior
 	{
-		#region ResetTrigger ATTACHED PROPERTY
+#region ResetTrigger ATTACHED PROPERTY
 
 		public static object GetResetTrigger(ZoomControl zoomControl)
 		{
@@ -28,7 +32,7 @@ namespace Chinook.View.Controls
 			(sender as ZoomControl).ResetViewPort();
 		}
 
-		#endregion
+#endregion
 	}
 }
 #endif
