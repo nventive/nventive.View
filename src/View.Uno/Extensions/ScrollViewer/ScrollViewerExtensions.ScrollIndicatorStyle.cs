@@ -12,7 +12,7 @@ using Uno.Logging;
 using UIKit;
 #endif
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// Allows for setting the UIScrollViewIndicatorStyle of a ScrollViewer on iOS. Does not apply to other platforms

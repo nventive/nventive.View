@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 #if __IOS__
 	[Foundation.PreserveAttribute(AllMembers = true)]

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using Uno;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	public interface IPrettySizeFormatter : IPrettyNumberFormatter
 	{

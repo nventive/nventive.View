@@ -5,7 +5,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Documents;
 using Windows.UI.Xaml.Media;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public partial class HtmlTextBlockBehavior
 	{

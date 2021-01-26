@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	/// <summary>
 	/// A control which wraps a Path, facilitating animation and allowing binding to the Foreground property (mapped to Path.Fill through styles).

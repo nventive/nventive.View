@@ -10,7 +10,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 using Uno.Disposables;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public sealed partial class LogCounterControl : ContentControl, ILogger
 	{

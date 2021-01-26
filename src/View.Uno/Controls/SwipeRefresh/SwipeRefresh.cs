@@ -12,7 +12,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	/// <summary>
 	/// Control which implements the 'swipe to refresh' or 'pull to refresh' pattern. Shows a visual and calls a refresh trigger

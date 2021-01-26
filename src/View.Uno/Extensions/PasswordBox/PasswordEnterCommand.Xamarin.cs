@@ -22,7 +22,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using Windows.System;
 #endif
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public class PasswordEnterCommand
 	{

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	public interface IPrettyDistanceFormatter
 	{

@@ -7,7 +7,7 @@ using Windows.UI.ViewManagement;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// Provides attached properties on UserControl or Page to handle StatusBar

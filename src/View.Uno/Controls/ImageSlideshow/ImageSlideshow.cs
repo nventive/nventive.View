@@ -13,7 +13,7 @@ using Uno.Disposables;
 using Windows.UI.Core;
 using System.Threading.Tasks;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	[TemplatePart(Name = "PART_FlipView", Type = typeof(Selector))]
 	[TemplatePart(Name = "PART_ItemsControl", Type = typeof(ItemsControl))]

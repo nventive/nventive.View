@@ -9,7 +9,7 @@ using IDependencyObject = Windows.UI.Xaml.DependencyObject;
 #endif
 
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// A behavior that, when attached to a listView, scrolls SelectedItem into view when it is selected.

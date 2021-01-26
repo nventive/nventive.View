@@ -11,7 +11,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Input;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	[Windows.UI.Xaml.Data.Bindable]
 	public partial class TextBoxBehavior

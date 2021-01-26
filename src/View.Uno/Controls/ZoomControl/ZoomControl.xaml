@@ -5,7 +5,7 @@
 					xmlns:xamarin="http://nventive.com/xamarin"
 					xmlns:ios="http://nventive.com/ios"
 					xmlns:android="http://nventive.com/android"
-					xmlns:u="using:Chinook.View.Controls"
+					xmlns:u="using:Nventive.View.Controls"
 					xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 					mc:Ignorable="ios android xamarin">
 

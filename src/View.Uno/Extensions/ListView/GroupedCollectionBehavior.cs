@@ -18,7 +18,7 @@ using _ListViewLegacy = Uno.UI.Controls.Legacy.ListView;
 using _ListViewBase = Windows.UI.Xaml.Controls.ListViewBase;
 #endif
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// Wraps a IGrouping<TKey, TValue> into a CollectionViewSource with IsSourceGrouped enabled. Can be used with IEnumerable.GroupBy or GroupAlphabetically.

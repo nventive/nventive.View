@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Android.Views;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public class PanGestureListener : GestureDetector.SimpleOnGestureListener
 	{

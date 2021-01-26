@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Chinook.View
+namespace Nventive.View
 {
 	internal class ActionDisposable : IDisposable
 	{

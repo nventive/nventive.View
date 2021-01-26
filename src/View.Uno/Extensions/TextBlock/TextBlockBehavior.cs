@@ -12,7 +12,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 #endif
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public class TextBlockBehavior
 	{

@@ -5,7 +5,7 @@ using System.Reactive.Concurrency;
 using System.Text;
 using Windows.UI.Core;
 
-namespace Chinook.View
+namespace Nventive.View
 {
 	internal partial class MainDispatcherScheduler : IScheduler
 	{

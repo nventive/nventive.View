@@ -4,7 +4,7 @@ using System.Reactive.Concurrency;
 using System.Reactive.Disposables;
 using Android.OS;
 
-namespace Chinook.View
+namespace Nventive.View
 {
 	internal partial class MainDispatcherScheduler
 	{

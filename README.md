@@ -1,4 +1,4 @@
-# Chinook.View
+# Nventive.View
 Suite of controls to use with WinUI and Uno Platform
 
 # IMPORTANT NOTE:

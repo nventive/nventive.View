@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public enum SwipingState
 	{

@@ -6,13 +6,9 @@
 					xmlns:xamarin="http://nventive.com/xamarin"
 					xmlns:android="http://nventive.com/android"
 					xmlns:ios="http://nventive.com/ios"
-					xmlns:not_android="http:///umbrella/ui/not_android"
-					xmlns:not_ios="http:///umbrella/ui/not_ios"
-					xmlns:u="using:Chinook.View.Controls"
-					xmlns:uc="using:nVentive.Chinook.Views.Converters"
-					xmlns:cv="using:Parkland.Views.Converters"
+					xmlns:u="using:Nventive.View.Controls"
 					xmlns:uloc="http://nventive.com/localization/1.0"
-					xmlns:ub="using:Chinook.View.Extensions"
+					xmlns:ub="using:Nventive.View.Extensions"
 					mc:Ignorable="d xamarin android ios uloc">
 
 	<!-- This one is for things that should be visible by default. It has a fade in animation. -->

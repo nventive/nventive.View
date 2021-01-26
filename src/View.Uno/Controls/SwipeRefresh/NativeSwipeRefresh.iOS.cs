@@ -6,7 +6,7 @@ using CoreGraphics;
 using UIKit;
 using Windows.Foundation;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class NativeSwipeRefresh : UIRefreshControl
 	{

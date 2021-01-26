@@ -12,7 +12,7 @@ using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	public interface IAutoRefreshConverter : IValueConverter
 	{

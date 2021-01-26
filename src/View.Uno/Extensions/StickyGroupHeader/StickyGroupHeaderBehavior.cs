@@ -15,7 +15,7 @@ using _FrameworkElement = Windows.UI.Xaml.FrameworkElement;
 using _FrameworkElement = Windows.UI.Xaml.FrameworkElement;
 #endif
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public static class StickyGroupHeaderBehavior
 	{

@@ -13,7 +13,7 @@ using Uno.Disposables;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public partial class PasswordBoxBehavior : DependencyObject
 	{

@@ -10,7 +10,7 @@ using Windows.UI.Core;
 using Windows.Foundation.Metadata;
 #endif
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
     public partial class MembershipCardControl
     {

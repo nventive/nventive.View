@@ -9,7 +9,7 @@ using CoreGraphics;
 using Uno.Extensions;
 using UIKit;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// This behavior adds an extendion on top of the keyboard for iOS. Each TextBox must be identified by a separate ID (string) in order for this behavior to work as intended.

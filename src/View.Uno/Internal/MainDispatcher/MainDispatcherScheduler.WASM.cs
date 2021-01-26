@@ -3,7 +3,7 @@ using System;
 using System.Reactive.Concurrency;
 using System.Reactive.Disposables;
 
-namespace Chinook.View
+namespace Nventive.View
 {
 	internal partial class MainDispatcherScheduler
 	{

@@ -5,7 +5,7 @@ using System.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// BindableVisualState is a class that exposes attachable properties named VisualStateName that lets you bind a string on a Control to set a VisualState.

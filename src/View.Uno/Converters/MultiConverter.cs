@@ -20,7 +20,7 @@ using System.Windows.Markup;
 using GenericCulture = System.Globalization.CultureInfo;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// A converter that chains multiple converters in order to provide a result.  Each provided will be 

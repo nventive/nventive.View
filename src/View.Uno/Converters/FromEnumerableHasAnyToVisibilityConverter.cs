@@ -13,7 +13,7 @@ using Visibility = Windows.UI.Xaml.Visibility;
 using System.Windows;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter outputs a visibility value based on the presence of any items in an enumerable

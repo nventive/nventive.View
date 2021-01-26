@@ -12,7 +12,7 @@ using Visibility = Windows.UI.Xaml.Visibility;
 using System.Windows;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter will output a visibility based on if a nullable bool is set to true or otherwise.

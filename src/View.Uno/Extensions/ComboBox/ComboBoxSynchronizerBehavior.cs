@@ -12,7 +12,7 @@ using SharedBinding = Windows.UI.Xaml.Data.Binding;
 using static Windows.UI.Xaml.DependencyObjectStore;
 #endif
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public static class ComboBoxSynchronizerBehavior
 	{

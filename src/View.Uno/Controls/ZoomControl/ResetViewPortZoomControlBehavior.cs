@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Windows.UI.Xaml;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public static partial class ResetViewPortZoomControlBehavior
 	{

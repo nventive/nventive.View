@@ -12,7 +12,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	static public partial class ScrollViewerExtensions
 	{

@@ -7,7 +7,7 @@ using Uno.Extensions;
 using Uno.Logging;
 using System.ComponentModel;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	/// <summary>
 	/// A custom panel which maintains proportion on the child controls.

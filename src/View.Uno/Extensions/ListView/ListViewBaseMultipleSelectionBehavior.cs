@@ -9,7 +9,7 @@ using Uno.Logging;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// Behavior that allows values to be bound to the SelectedItems property of a ListViewBase control

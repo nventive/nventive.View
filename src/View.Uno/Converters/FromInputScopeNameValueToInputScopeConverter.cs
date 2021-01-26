@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Text;
 using Windows.UI.Xaml.Input;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	public class FromInputScopeNameValueToInputScopeConverter : ConverterBase
 	{
