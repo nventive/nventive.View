@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
-using Chinook.View.Converters.PrettyDistanceConverter.Resources;
+using Nventive.View.Converters.PrettyDistanceConverter.Resources;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	public class DistanceHelper
 	{

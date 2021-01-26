@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
-using Chinook.View.Converters.PrettyDateConverter.Resources;
+using Nventive.View.Converters.PrettyDateConverter.Resources;
 #if !WINDOWS_UWP && !__ANDROID__ && !__IOS__ && !__WASM__
 using Uno.Localisation;
 #else
 using CultureInfo = System.String;
 #endif
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	public interface IPrettyDateFormatter
 	{

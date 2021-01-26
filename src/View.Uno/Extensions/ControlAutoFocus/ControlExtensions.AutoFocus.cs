@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public partial class ControlExtensions
 	{

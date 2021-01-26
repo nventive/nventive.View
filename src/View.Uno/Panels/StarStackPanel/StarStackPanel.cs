@@ -21,7 +21,7 @@ using UIElement = Android.Views.View;
 using UIElement = UIKit.UIView;
 #endif
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class StarStackPanel : Panel
 	{

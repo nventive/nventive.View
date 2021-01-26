@@ -12,7 +12,7 @@ using Windows.System;
 using System.Reactive.Linq;
 using System.Reactive.Concurrency;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	[Windows.UI.Xaml.Data.Bindable]
 	public partial class PasswordBoxBehavior
@@ -110,7 +110,7 @@ namespace Chinook.View.Extensions
 		/// <param name="e">Dependency property event arguments</param>
 		private static void EnterCommandChanged(object d, DependencyPropertyChangedEventArgs e)
 		{
-			//For Windows the event is hooked up in Chinook.Views.Shared.Xaml.PasswordBehavior.cs
+			//For Windows the event is hooked up in Nventive.Views.Shared.Xaml.PasswordBehavior.cs
 #if __ANDROID__ || __IOS__
 			var box = d as PasswordBox;
 			if (box != null && e.NewValue != null)

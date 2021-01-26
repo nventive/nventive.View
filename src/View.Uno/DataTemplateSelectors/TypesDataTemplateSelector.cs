@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using Uno;
 
-namespace Chinook.View.DataTemplateSelectors
+namespace Nventive.View.DataTemplateSelectors
 {
 	public class TypesDataTemplateSelector : DataTemplateSelector, IList<MatchType>
 	{

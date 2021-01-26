@@ -6,7 +6,7 @@ using System.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// Extension that allows to update the listview template's size when the size of the screen changes,

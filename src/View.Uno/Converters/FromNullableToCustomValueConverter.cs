@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 using System.Text;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// A converter that is used to return a custom value based on the presence or absence of value.

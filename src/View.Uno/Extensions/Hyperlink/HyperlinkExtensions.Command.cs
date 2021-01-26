@@ -9,7 +9,7 @@ using System.Windows.Input;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Documents;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public partial class HyperlinkExtensions
 	{

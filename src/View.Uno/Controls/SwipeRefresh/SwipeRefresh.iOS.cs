@@ -12,7 +12,7 @@ using Microsoft.Extensions.Logging;
 using Uno.Logging;
 using Uno.Disposables;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class SwipeRefresh
 	{

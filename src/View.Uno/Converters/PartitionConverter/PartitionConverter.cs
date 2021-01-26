@@ -11,7 +11,7 @@ using Windows.UI.Xaml.Markup;
 using System.Windows.Markup;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter is intended to partition the entire double universe in xaml.

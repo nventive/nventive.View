@@ -16,7 +16,7 @@ using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This is the base class for converters used for formatting double values to string.

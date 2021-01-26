@@ -15,7 +15,7 @@ using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// Converts a enum value to a readable localizable string using the resource manager.

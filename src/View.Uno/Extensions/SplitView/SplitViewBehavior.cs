@@ -17,7 +17,7 @@ using Uno.UI;
 using Uno.UI.Controls;
 #endif
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// This behavior adds features to the SplitView.

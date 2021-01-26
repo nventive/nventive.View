@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using UIKit;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
     internal class SwipableItemGestureDelegate: UIGestureRecognizerDelegate
 	{

@@ -1,6 +1,6 @@
 ﻿#if WINDOWS_UWP
 #pragma warning disable CS0618 // Type or member is obsolete
-namespace Chinook.View.Converters.PrettyDateConverter.Resources
+namespace Nventive.View.Converters.PrettyDateConverter.Resources
 {
 	using System;
 	using System.Collections.Generic;
@@ -9,7 +9,7 @@ namespace Chinook.View.Converters.PrettyDateConverter.Resources
 
 	internal class PrettyDateFormatterStrings 
 	{
-		private const string ResourcePrefix = "Chinook.View/PrettyDateFormatterStrings/";
+		private const string ResourcePrefix = "Nventive.View/PrettyDateFormatterStrings/";
 
 		private static ResourceMap resourceMan;
 

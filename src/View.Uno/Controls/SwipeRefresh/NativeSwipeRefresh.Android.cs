@@ -13,7 +13,7 @@ using AndroidX.Core.View;
 using Android.Widget;
 using AndroidX.RecyclerView.Widget;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class NativeSwipeRefresh : SwipeRefreshLayout, DependencyObject
 	{

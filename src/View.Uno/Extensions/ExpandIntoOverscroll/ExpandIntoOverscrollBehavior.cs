@@ -13,7 +13,7 @@ using UIKit;
 using Uno.Extensions;
 #endif
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public class ExpandIntoOverscrollBehavior
 	{

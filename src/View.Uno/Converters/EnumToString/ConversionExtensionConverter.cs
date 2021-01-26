@@ -16,7 +16,7 @@ using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter uses the conversion extensions that are registered in an application in order

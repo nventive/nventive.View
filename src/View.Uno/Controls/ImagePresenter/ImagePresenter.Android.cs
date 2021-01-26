@@ -6,7 +6,7 @@ using Android.Animation;
 using Android.Views;
 using Windows.UI.Xaml;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class ImagePresenter
 	{

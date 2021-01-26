@@ -16,7 +16,7 @@ using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// <para>A converter that applies a <seealso cref="String.Format(GenericCulture, object, object)"/> to a given object.</para>

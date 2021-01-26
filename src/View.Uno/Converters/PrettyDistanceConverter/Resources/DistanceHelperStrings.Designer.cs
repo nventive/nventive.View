@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Chinook.View.Converters.PrettyDistanceConverter.Resources {
+namespace Nventive.View.Converters.PrettyDistanceConverter.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Chinook.View.Converters.PrettyDistanceConverter.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Chinook.View.Converters.PrettyDistanceConverter.Resources.DistanceHelperStrings", typeof(DistanceHelperStrings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Nventive.View.Converters.PrettyDistanceConverter.Resources.DistanceHelperStrings", typeof(DistanceHelperStrings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

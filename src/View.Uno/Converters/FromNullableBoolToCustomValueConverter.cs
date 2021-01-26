@@ -10,7 +10,7 @@ using Windows.UI.Xaml;
 using System.Windows;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter is used to get a custom value if a nullable boolean is true or otherwise.

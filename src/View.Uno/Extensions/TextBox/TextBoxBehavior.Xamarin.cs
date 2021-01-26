@@ -8,7 +8,7 @@ using Windows.System;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
     public partial class TextBoxBehavior
     {

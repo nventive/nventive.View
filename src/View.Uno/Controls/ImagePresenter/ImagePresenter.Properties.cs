@@ -6,7 +6,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class ImagePresenter : Control
 	{

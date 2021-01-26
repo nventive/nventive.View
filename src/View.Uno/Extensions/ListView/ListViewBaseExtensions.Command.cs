@@ -10,7 +10,7 @@ using Windows.UI.Xaml.Controls;
 using System.Runtime.CompilerServices;
 using Uno.Logging;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	/// <summary>
 	/// Contains attached properties that can be applied to a <see cref="ListViewBase"/> to work with commands.

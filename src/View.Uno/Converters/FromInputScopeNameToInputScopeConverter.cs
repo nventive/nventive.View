@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Windows.UI.Xaml.Input;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter is used to turn an InputScopeNameValue into an InputScope

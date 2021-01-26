@@ -5,7 +5,7 @@ using System.Text;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	[TemplatePart(Name = ScrollViewerPartName, Type = typeof(ScrollViewer))]
 	[TemplatePart(Name = SnapPanelPartName, Type = typeof(SnapPanel))]

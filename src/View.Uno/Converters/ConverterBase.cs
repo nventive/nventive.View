@@ -13,7 +13,7 @@ using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
     // We removed TargetType validation because of implicit conversion verification.  Since in some platforms
     // (not all), we can implicitely convert from one type to another either by using the implicit operators on

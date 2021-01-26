@@ -9,7 +9,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public class SnapPanel : Panel, IScrollSnapPointsInfo
 	{

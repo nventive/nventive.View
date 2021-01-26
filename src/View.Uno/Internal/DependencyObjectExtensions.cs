@@ -27,7 +27,7 @@ using UIKit;
 #endif
 
 
-namespace Chinook.View
+namespace Nventive.View
 {
 	internal static partial class DependencyObjectExtensions
 	{

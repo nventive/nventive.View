@@ -1,11 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					xmlns:local="using:Chinook.View.Controls"
+					xmlns:local="using:Nventive.View.Controls"
 					xmlns:win="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 					xmlns:xamarin="http://nventive.com/xamarin"
 					xmlns:ios="http://nventive.com/ios"
 					xmlns:android="http://nventive.com/android"
-					xmlns:u="using:Chinook.View.Controls"
+					xmlns:u="using:Nventive.View.Controls"
 					xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 					mc:Ignorable="ios android xamarin">
 

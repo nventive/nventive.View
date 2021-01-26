@@ -10,7 +10,7 @@ using Uno.Logging;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	[TemplateVisualState(GroupName = AnimationVisualStateGroup, Name = AnimatingVisualState)]
 	[TemplateVisualState(GroupName = AnimationVisualStateGroup, Name = NotAnimatingVisualState)]

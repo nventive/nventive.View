@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	[TemplatePart(Name = GridPartName, Type = typeof(Grid))]
 	[TemplatePart(Name = ImageBorderPartName, Type = typeof(Border))]

@@ -4,7 +4,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Text;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter will return the opposite value of a nullable bool.

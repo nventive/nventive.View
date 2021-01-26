@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Graphics.Display;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	internal static class RectExtensions
 	{

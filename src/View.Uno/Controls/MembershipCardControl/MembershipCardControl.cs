@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Core;
 using Uno.Disposables;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	/// <summary>
 	/// Control to display as a popup a membership card when the device is rotated to landscape, in an app which is otherwise locked to portrait.

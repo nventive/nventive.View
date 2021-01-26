@@ -7,7 +7,7 @@ using Windows.Foundation;
 using Windows.UI.Xaml.Controls;
 using NativeValue = System.Double;
 
-namespace Chinook.View
+namespace Nventive.View
 {
 	internal static class SizeExtensions
 	{

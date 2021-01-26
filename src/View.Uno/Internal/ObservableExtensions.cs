@@ -13,7 +13,7 @@ using Windows.UI.Xaml;
 using FrameworkElement = Windows.UI.Xaml.FrameworkElement;
 #endif
 
-namespace Chinook.View
+namespace Nventive.View
 {
 	[Flags]
 	internal enum SubscribeToElementOptions : byte

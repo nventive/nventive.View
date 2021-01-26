@@ -14,7 +14,7 @@ using System.Windows.Data;
 using GenericCulture = System.Globalization.CultureInfo;
 #endif
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter is used to provide an easily readable and comprehensible string based on a TimeSpan, DateTime or DateTimeOffset.

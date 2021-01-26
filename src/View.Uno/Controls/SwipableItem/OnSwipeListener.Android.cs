@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Uno.UI;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public class OnSwipeListener : Java.Lang.Object, Android.Views.View.IOnTouchListener
 	{

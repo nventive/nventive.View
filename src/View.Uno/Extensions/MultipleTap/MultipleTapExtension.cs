@@ -7,7 +7,7 @@ using Uno.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Input;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public class MultipleTapExtension
 	{

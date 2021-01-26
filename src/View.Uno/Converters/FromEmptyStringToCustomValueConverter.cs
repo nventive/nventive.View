@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter outputs a custom value based on on the presence or absence of characters in a string.

@@ -6,7 +6,7 @@ using System.Text;
 using Uno.Extensions;
 using Uno;
 
-namespace Chinook.View.Converters
+namespace Nventive.View.Converters
 {
 	/// <summary>
 	/// This converter is used to provide an easily readable and comprehensible string based on a file size.

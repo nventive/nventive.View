@@ -25,7 +25,7 @@ using View = UIKit.UIView;
 using View = Android.Views.View;
 #endif
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	/// <summary>
 	/// Represents a scrollable and zoomable area that can contain other visible elements.

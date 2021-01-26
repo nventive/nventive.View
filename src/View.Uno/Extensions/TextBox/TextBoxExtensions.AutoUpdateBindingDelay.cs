@@ -8,7 +8,7 @@ using Uno.Extensions;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public class TextBoxExtendedProperties
 	{

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class PeekingFlipViewItem : SelectorItem
 	{

@@ -7,7 +7,7 @@ using System.Text;
 using System.Globalization;
 using Uno.Disposables;
 
-namespace Chinook.View.Extensions
+namespace Nventive.View.Extensions
 {
 	public partial class TextBoxBehavior : DependencyObject
 	{

@@ -5,7 +5,7 @@ using System.Text;
 using UIKit;
 using Windows.UI.Xaml;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class ImagePresenter
 	{

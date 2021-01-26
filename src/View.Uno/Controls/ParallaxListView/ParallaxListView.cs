@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Media;
 using Uno.Logging;
 using System.Reactive.Linq;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	[TemplatePart(Name = HeaderBackgroundName, Type = typeof(StackPanel))]
 	[TemplatePart(Name = HeaderForegroundName, Type = typeof(StackPanel))]

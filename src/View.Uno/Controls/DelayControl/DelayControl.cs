@@ -10,7 +10,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Markup;
 using Windows.UI.Xaml.Media;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	/// <summary>
 	/// The goal of the control is to delay view creation.

@@ -13,7 +13,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
 using System.Numerics;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	public partial class SwipableItem : ContentControl, Android.Views.View.IOnTouchListener
 	{

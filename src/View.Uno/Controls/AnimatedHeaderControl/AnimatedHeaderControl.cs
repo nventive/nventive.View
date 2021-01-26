@@ -11,7 +11,7 @@ using Windows.UI.Xaml.Controls;
 using Microsoft.Extensions.Logging;
 using Uno.Logging;
 
-namespace Chinook.View.Controls
+namespace Nventive.View.Controls
 {
 	/// <summary>
 	/// A control which wraps a scrolling container (eg, a ScrollViewer or a ListView) and exposes the scrolled offset relative to a defined header height.

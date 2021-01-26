@@ -1,6 +1,6 @@
 ﻿#if WINDOWS_UWP
 #pragma warning disable CS0618 // Type or member is obsolete
-namespace Chinook.View.Converters.PrettyDistanceConverter.Resources
+namespace Nventive.View.Converters.PrettyDistanceConverter.Resources
 {
 	using System;
 	using System.Runtime.CompilerServices;
@@ -8,7 +8,7 @@ namespace Chinook.View.Converters.PrettyDistanceConverter.Resources
 
 	internal class DistanceHelperStrings
 	{
-		private const string ResourcePrefix = "Chinook.View/DistanceHelperStrings/";
+		private const string ResourcePrefix = "Nventive.View/DistanceHelperStrings/";
 
 		private static ResourceMap _resourceMap;
 
